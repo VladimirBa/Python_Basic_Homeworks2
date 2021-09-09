@@ -1,14 +1,14 @@
 class Database:
 
-    def read_data(self):
+    def read_data(self, user_el):
         criteria = list(dict(age1=25, age2=30).values())
-
+        self.user_el = user_el
         data_list = []
         for c in criteria:
             for u in user_el:
                 if u.__dict__.get('age') == c:
                     data_list.append(u)
-        return data_list
+        print( data_list)
 
     def write_data(self, element):
 
@@ -39,4 +39,4 @@ users = [user1, user2, user3, user4]
 for u in users:
     dtbs.write_data(u)
 
-dtbs.read_data(self)
+dtbs.read_data(user_el=[])
