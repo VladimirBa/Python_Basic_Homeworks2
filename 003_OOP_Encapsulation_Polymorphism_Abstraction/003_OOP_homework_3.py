@@ -1,36 +1,42 @@
 class Database:
-    def __init__(self, criteria, element):
-        self._criteria = criteria
-        self._element = element
 
     def read_data(self):
-        user_list = []
-        if element in criteria:
-            user_list.append(user)
-        print(list(user_list))
+        criteria = list(dict(age1=25, age2=30).values())
 
-    def write_data(self):
-        return element
+        data_list = []
+        for c in criteria:
+            for u in user_el:
+                if u.__dict__.get('age') == c:
+                    data_list.append(u)
+        return data_list
+
+    def write_data(self, element):
+
+        users_el = []
+        users_el.append(element)
+        return users_el
 
 
-class Data(Database):
-    def __int__(self, _user):
-        self.user = user
+class Data:
 
     def __init__(self, country, name, age, gender, height, weight):
-        self._country = country
-        self.__name = name
+        self.country = country
+        self.name = name
         self.age = age
-        self._gender = gender
-        self._height = height
-        self._weight = weight
+        self.gender = gender
+        self.height = height
+        self.weight = weight
 
 
+dtbs = Database()
 user1 = Data(country="USA", name="Ann", age=25, gender='Female', height=160, weight=60)
-user = user1
-element = user.__dict__.get('age')
-user.write_data()
-crit = dict(age1=25, age2=30)
-criteria = list(crit.values())
-c = Database(criteria, element)
-c.read_data()
+user2 = Data(country="USA", name="Mike", age=42, gender='Male', height=182, weight=90)
+user3 = Data(country="GB", name="John", age=30, gender='Male', height=170, weight=81)
+user4 = Data(country="PRC", name="Ju", age=25, gender='Female', height=152, weight=51)
+
+users = [user1, user2, user3, user4]
+
+for u in users:
+    dtbs.write_data(u)
+
+dtbs.read_data(self)
