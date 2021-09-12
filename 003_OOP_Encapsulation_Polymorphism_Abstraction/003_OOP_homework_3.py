@@ -2,13 +2,13 @@ class Database:
 
     def read_data(self, user_el):
         criteria = list(dict(age1=25, age2=30).values())
-        self.user_el = user_el
+        user_el = user_el
         data_list = []
         for c in criteria:
             for u in user_el:
                 if u.__dict__.get('age') == c:
                     data_list.append(u)
-        print( data_list)
+        print(data_list)
 
     def write_data(self, element):
 
