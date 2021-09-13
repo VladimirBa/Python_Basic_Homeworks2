@@ -1,7 +1,7 @@
 def cont():
     c = input("Do you want to stop computing? Enter Y if yes: ")
     while True:
-        if c == "Y":
+        if c == "Y" or c == 'y':
             return None
         else:
             return main()
@@ -51,7 +51,7 @@ def main():
     try:
         if d not in ['+', '-', '*', '/', '**']:
             raise Exception
-    except:
+    except Exception:
         print('Enter valid operation sign.')
         main()
 
