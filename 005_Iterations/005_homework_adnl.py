@@ -1,4 +1,4 @@
-class ReversedList(object):
+class ReversedList:
 
     def __init__(self, my_list):
 
