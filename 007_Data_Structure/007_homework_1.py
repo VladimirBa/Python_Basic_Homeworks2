@@ -5,8 +5,15 @@ d = {
           'surname': ['Doe', 'Smith']}
 }
 new_d = []
-for key1, val1 in d.items():
-    for key2, val2 in val1.items():
-        for i in val2:
-            new_d.append(i)
+
+
+def func():
+    for key1, val1 in d.items():
+        for key2, val2 in val1.items():
+            for i in val2:
+                new_d.append(i)
+    return new_d
+
+
+func()
 print(new_d)
