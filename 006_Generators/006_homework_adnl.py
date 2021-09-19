@@ -3,7 +3,7 @@ def find_prime():
     prime_index = 20
     while count <= prime_index:
         for i in range(2, num):
-            if (num % i) == 0:
+            if num % i == 0:
                 break
         else:
             yield num
