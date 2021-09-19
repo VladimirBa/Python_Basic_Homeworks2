@@ -10,8 +10,8 @@ new_d = []
 def func():
     for key1, val1 in d.items():
         for key2, val2 in val1.items():
-            for i in val2:
-                new_d.append(i)
+            for element in val2:
+                new_d.append(element)
     return new_d
 
 
