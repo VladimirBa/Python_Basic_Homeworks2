@@ -15,5 +15,4 @@ def func():
     return new_d
 
 
-func()
-print(new_d)
+print(func())
